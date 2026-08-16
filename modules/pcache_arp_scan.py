@@ -111,7 +111,7 @@ def ArpProcessor(Target,
             )
         
         print(
-            f"-Initiating Ncache scan\n-Ncache scan report for {Target}\n"
+            f"-Initiating Pcache scan\n-Pcache scan report for {Target}\n"
             )
         
         console.print(
