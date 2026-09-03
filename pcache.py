@@ -6,7 +6,7 @@ from modules.pcache_arp_scan import ArpProcessor
 from modules.pcache_passive_scan import PassiveScan
 from modules.pcache_system_info import SystemInfo
 from modules.pcache_vendor_scan import VendorLu
-
+from modules.pcache_ping_scan import PingScan
 
 def main():
 
@@ -16,6 +16,10 @@ def main():
 
     parser.add_argument(
         "-As", action="store_true", help="Scans Using ARP"
+        )
+
+    parser.add_argument(
+        "-Ping", action="store_true", help="Pings a target using ICMP echo request"
         )
     
     parser.add_argument(
@@ -115,6 +119,17 @@ def main():
                 args.Target,
                 args.save
             )
+
+        elif args.Ping:
+            if not args.Target:
+                raise ValueError(
+                    "Target is required for ping scan"
+                    )
+
+            PingScan(
+                args.Target,
+                args.save
+            )        
 
     except Exception as e:
         print(
