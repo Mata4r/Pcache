@@ -19,6 +19,7 @@ Pcache is a lightweight Python-based network scanner that focuses on passive sca
 - Local system information reporting
 - Adjustable scan timing options
 - Results saving
+- Device Ping
 
 ## Usage
 Run the scanner from the project root:
@@ -30,6 +31,8 @@ Run the scanner from the project root:
 `python pcache.py -V 00:1A:2B:3C:4D:5E`
 
 `python pcache.py -info`
+
+`python pcache.py -Ping 192.168.1.0`
 
 ### Note
 
