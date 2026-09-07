@@ -8,9 +8,9 @@
 ![Static Badge](https://img.shields.io/badge/Python-3.12-purple?labelColor=grey&logo=python&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/Networking-purple?style=flat)
 
-# Pcache GUI Branch
+# Pcache
 
-this branch turnes your Pcache terminal experience into a GUI (Graphical User Interface) 
+Pcache is a lightweight Python-based network scanner that focuses on passive scans.
 
 ## Features
 - ARP-based network scan
@@ -24,7 +24,15 @@ this branch turnes your Pcache terminal experience into a GUI (Graphical User In
 ## Usage
 Run the scanner from the project root:
 
-`python pcachegui.py`
+`python pcache.py -As 192.168.1.0/24`
+
+`python pcache.py -Ps 192.168.1.0/24 -i "Interface"`
+
+`python pcache.py -V 00:1A:2B:3C:4D:5E`
+
+`python pcache.py -info`
+
+`python pcache.py -Ping 192.168.1.0`
 
 ### Note
 
