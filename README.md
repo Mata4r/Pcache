@@ -34,6 +34,11 @@ Run the scanner from the project root:
 
 `python pcache.py -Ping 192.168.1.0`
 
+## GUI Usage
+Run the scanner from the project root, Then startup the GUI Version by runing:
+
+`python pcachegui.py`
+
 ### Note
 
 - Applying an Ip Address in a MAC vendor lookup well work but will cause ARP packet being sent to the Ip Address.
