@@ -12,6 +12,10 @@
 
 Pcache is a lightweight Python-based network scanner that focuses on passive scans.
 
+# Pcache GUI Branch
+
+this branch turnes your Pcache terminal experience into a GUI (Graphical User Interface) 
+
 ## Features
 - ARP-based network scan
 - Passive network discovery
