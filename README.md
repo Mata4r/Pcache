@@ -8,10 +8,6 @@
 ![Static Badge](https://img.shields.io/badge/Python-3.12-purple?labelColor=grey&logo=python&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/Networking-purple?style=flat)
 
-# Pcache
-
-Pcache is a lightweight Python-based network scanner that focuses on passive scans.
-
 # Pcache GUI Branch
 
 this branch turnes your Pcache terminal experience into a GUI (Graphical User Interface) 
