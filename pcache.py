@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
 import argparse
+import asyncio
 
 from modules.pcache_arp_scan import ArpProcessor
+from modules.pcache_ble_scan import scan_bluetooth_devices
 from modules.pcache_passive_scan import PassiveScan
 from modules.pcache_system_info import SystemInfo
 from modules.pcache_vendor_scan import VendorLu
@@ -20,6 +22,14 @@ def main():
 
     parser.add_argument(
         "-Ping", action="store_true", help="Pings a target using ICMP echo request"
+        )
+
+    parser.add_argument(
+        "-Ble", action="store_true", help="Scans nearby Bluetooth devices"
+        )
+
+    parser.add_argument(
+        "-live", action="store_true", help="Refresh Bluetooth scan results live"
         )
     
     parser.add_argument(
@@ -129,7 +139,12 @@ def main():
             PingScan(
                 args.Target,
                 args.save
-            )        
+            )
+
+        elif args.Ble:
+            asyncio.run(
+                scan_bluetooth_devices(args.save, args.live)
+            )
 
     except Exception as e:
         print(
