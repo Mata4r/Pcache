@@ -1,5 +1,8 @@
-"""Module docstring here.
 
+# SPDX-License-identifier: MIT
+# Copyright (c) 2026 matar
+
+"""
 desc: This module collects and displays icmp echo reply based on Ip Address.
 
 Functions:
@@ -10,12 +13,19 @@ from scapy.all import ICMP, IP, sr1
 from rich.console import Console
 from datetime import datetime, time
 import time
+import sys
 import json
 import os
 
 # Calling the settings.json file to use its contents
-with open("config/settings.json") as f:
-    config = json.load(f)
+try:
+    with open("config/settings.json") as f:
+        config = json.load(f)
+except FileNotFoundError as e:
+    print(
+        f"Configuration file not found {e}"
+    )
+    sys.exit(1)
 
 verbose = config["verbose"]
 themecolor = config["theme-color"]
