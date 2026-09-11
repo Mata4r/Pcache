@@ -39,6 +39,7 @@ from mac_vendor_lookup import MacLookup
 from rich.console import Console
 from datetime import datetime
 import time
+import sys
 import os
 import json
 
@@ -50,8 +51,9 @@ try:
         config = json.load(f)
 except FileNotFoundError as e:
     print(
-        f"Error occurred: {e}"
+        f"Configuration file not found: {e}"
         )
+    sys.exit(1)
     
             
 
