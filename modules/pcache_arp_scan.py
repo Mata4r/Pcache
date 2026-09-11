@@ -3,7 +3,6 @@
 # Copyright (c) 2026 matar
 
 """
-
 desc: This module performs an ARP scan on the network to collect information about netwrok devices.
 
 Functions:
