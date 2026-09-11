@@ -50,7 +50,7 @@ try:
         config = json.load(f)
 except FileNotFoundError as e:
     print(
-        f"Configuration file not found {e}"
+        f"Configuration file not found: {e}"
     )
     sys.exit(1)
 
