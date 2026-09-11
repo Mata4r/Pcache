@@ -2,7 +2,7 @@
 # SPDX-License-identifier: MIT
 # Copyright (c) 2026 matar
 
-"""Module docstring here.
+"""
 
 desc: This module performs an ARP scan on the network to collect information about netwrok devices.
 
@@ -45,8 +45,15 @@ import json
 console = Console()
 
 # Calling the settings.json file to use its contents
-with open("config/settings.json") as f:
-    config = json.load(f)
+try:
+    with open("config/settings.json") as f:
+        config = json.load(f)
+except Exception as e:
+    print(
+        f"Error occurred: {e}"
+        )
+    
+            
 
 timeout = config["timeout"]
 verbose = config["verbose"]
