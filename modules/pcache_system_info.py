@@ -2,13 +2,12 @@
 # SPDX-License-identifier: MIT
 # Copyright (c) 2026 matar
 
-"""Module docstring here.
-
+"""
 desc: This module collects and displays information about the local system and network interface.
 It retrieves the system hostname, local IP address, and MAC address.
 
 Functions:
-    system_info():
+    SystemInfo():
         This function retrieves the hostname, local IP address, and MAC
         address of the system. It then displays the collected information
         in the console.
@@ -21,7 +20,6 @@ Functions:
 from scapy.all import get_if_hwaddr, conf
 from rich.console import Console
 import socket
-
 
 console = Console()
 
