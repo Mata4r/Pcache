@@ -41,14 +41,21 @@ from mac_vendor_lookup import MacLookup
 from rich.console import Console
 from datetime import datetime
 import ipaddress
+import sys
 import os
 import json
 
 console = Console()
 
 # Calling the settings.json file to use its contents
-with open("config/settings.json") as f:
-    config = json.load(f)
+try:
+    with open("config/settings.json") as f:
+        config = json.load(f)
+except FileNotFoundError as e:
+    print(
+        f"Configuration file not found {e}"
+    )
+    sys.exit(1)
 
 themecolor = config["theme-color"]
 
