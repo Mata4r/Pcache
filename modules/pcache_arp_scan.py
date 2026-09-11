@@ -48,7 +48,7 @@ console = Console()
 try:
     with open("config/settings.json") as f:
         config = json.load(f)
-except Exception as e:
+except FileNotFoundError as e:
     print(
         f"Error occurred: {e}"
         )
