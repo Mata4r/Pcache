@@ -3,7 +3,6 @@
 # Copyright (c) 2026 matar
 
 """
-
 desc: This module performs an Passive discovery on the network it collects information about connected devices
 
 Functions:
