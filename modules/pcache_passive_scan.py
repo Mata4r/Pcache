@@ -2,8 +2,6 @@
 # SPDX-License-identifier: MIT
 # Copyright (c) 2026 matar
 
-"""Module docstring here."""
-
 """
 
 desc: This module performs an Passive discovery on the network it collects information about connected devices
