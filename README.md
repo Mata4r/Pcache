@@ -43,6 +43,11 @@ Run the scanner from the project root:
 
 `-live` to live a BLE scan (Only works for BLE scans)
 
+### Note
+
+- Applying an Ip Address in a MAC vendor lookup well work but will cause ARP packet being sent to the Ip Address.
+
+- It is preferable to use a MAC address if available.
 
 ## GUI Usage
 Run the scanner from the project root, Then startup the GUI Version by runing:
@@ -50,10 +55,7 @@ Run the scanner from the project root, Then startup the GUI Version by runing:
 `python pcachegui.py`
 
 ### Note
-
-- Applying an Ip Address in a MAC vendor lookup well work but will cause ARP packet being sent to the Ip Address.
-
-- It is preferable to use a MAC address if available.
+Pcache GUI version was made fully by Claude code so if you notice any bugs, please open an issue or submit a pull request with a fix.
 
 # Windows installation
 
@@ -65,6 +67,7 @@ git clone https://github.com/Mata4r/Pcache.git
 cd Pcache
 ```
 ```bash
+
 pip install -r requirements.txt
 ```
 
