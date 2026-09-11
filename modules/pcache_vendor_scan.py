@@ -2,8 +2,7 @@
 # SPDX-License-identifier: MIT
 # Copyright (c) 2026 matar
 
-"""Module docstring here.
-
+"""
 desc: This module looks up the vendor associated with a MAC address. If the Target is a MAC address, it performs a direct vendor lookup using MacLookup(). If the Target is an IP address, it performs an ARP request to obtain the MAC address before looking up its vendor.
 
 Functions:
@@ -40,14 +39,21 @@ from mac_vendor_lookup import MacLookup
 from datetime import datetime
 from rich.console import Console
 import time
+import sys
 import os
 import json
 
 console = Console()
 
 # Calling the settings.json file to use its contents
-with open("config/settings.json") as f:
-    config = json.load(f)
+try:
+    with open("config/settings.json") as f:
+        config = json.load(f)
+except FileNotFoundError as e:
+    print(
+        f"Configuration file not found: {e}"
+    )
+    sys.exit(1)
 
 timeout = config["timeout"]
 verbose = config["verbose"]
