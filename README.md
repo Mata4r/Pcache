@@ -37,6 +37,12 @@ Run the scanner from the project root:
 
 `python pcache.py -Ble`
 
+### Main flags
+
+`-save` to save results 
+
+`-live` to live a BLE scan (Only works for BLE scans)
+
 
 ## GUI Usage
 Run the scanner from the project root, Then startup the GUI Version by runing:
