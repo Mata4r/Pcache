@@ -13,26 +13,30 @@
 Pcache is a lightweight Python-based network scanner that focuses on passive scans.
 
 ## Features
-- ARP-based network scan
+- ARP-based network Scan
+- BLE device Scan
 - Passive network discovery
 - MAC vendor lookup
 - Local system information reporting
-- Adjustable scan timing options
-- Results saving
+- Adjustable Scan timing options
+- Results Saving
 - Device Ping
 
 ## Usage
 Run the scanner from the project root:
 
-`python pcache.py -As 192.168.1.0/24`
-
 `python pcache.py -Ps 192.168.1.0/24 -i "Interface"`
 
 `python pcache.py -V 00:1A:2B:3C:4D:5E`
 
-`python pcache.py -info`
+`python pcache.py -As 192.168.1.0/24`
 
 `python pcache.py -Ping 192.168.1.0`
+
+`python pcache.py -info`
+
+`python pcache.py -Ble`
+
 
 ## GUI Usage
 Run the scanner from the project root, Then startup the GUI Version by runing:
