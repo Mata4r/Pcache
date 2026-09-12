@@ -1,4 +1,22 @@
 
+# SPDX-License-identifier: MIT
+# Copyright (c) 2026 matar
+
+"""
+desc: This module is used to initiate a denial-of-service scan against a target address using multiple protocol types, including ICMP, TCP, UDP, HTTP, and HTTPS. It is designed for network testing scenarios where the user wants to generate traffic toward a chosen host and monitor or interrupt the operation manually.
+
+Functions:
+    _handle_sigint(signum, frame): Handles the interrupt signal to stop the active scan gracefully.
+    StartDos(Target, protocol): Begins the selected packet-based attack against the target and continues until the user stops it with Ctrl+C or the operation is interrupted.
+
+Notes:
+    - The module loads configuration values from config/settings.json to determine runtime verbosity.
+    - The scan supports common transport protocols and port-based traffic for HTTP and HTTPS.
+    - A signal handler is registered to allow safe interruption without leaving the process in an inconsistent state.
+    - This module is intended for authorized, controlled testing environments only and should be used responsibly.
+
+"""
+
 from scapy.all import IP, ICMP, send, TCP, UDP
 from rich.console import Console
 import json
