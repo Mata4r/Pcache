@@ -126,9 +126,4 @@ async def scan_bluetooth_devices(save=False, live=False, interval=5.0):
             if not live:
                 break
             await asyncio.sleep(interval)
-
-if __name__ == "__main__":
-    try:
-        asyncio.run(scan_bluetooth_devices())
-    except (KeyboardInterrupt, asyncio.CancelledError):
-        print("\nBluetooth scan stopped.")
+              
