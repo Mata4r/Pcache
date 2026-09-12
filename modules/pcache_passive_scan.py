@@ -141,7 +141,7 @@ def PassiveScan(Target,
         # Scapy sniff() function to start a live packet sniffing and leading every packet to packet_processor() function
         result = sniff(iface=interface,
                        prn=lambda pkt: packet_processor(Target, pkt),
-                       store=False)
+                       store=store)
     except KeyboardInterrupt:
         print()
     
