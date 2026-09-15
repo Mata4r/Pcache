@@ -109,9 +109,10 @@ def packet_processor(Target,
 # The main function to network sniffing
 def PassiveScan(Target,
                        interface,
-                       save=False):
+                       save=False,
+                       store=False):
 
-    global store, themecolor
+    global themecolor
 
     now = datetime.now().strftime(
         "%Y-%m-%d %H:%M:%S"
