@@ -1,5 +1,6 @@
 {
   "timeout" : 3,
   "verbose" : false,
-  "theme-color": "italic magenta"
+  "theme-color": "italic magenta",
+  "store": false
 }
