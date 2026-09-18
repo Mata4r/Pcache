@@ -55,7 +55,6 @@ except FileNotFoundError as e:
     sys.exit(1)
 
 themecolor = config["theme-color"]
-store = config["store"]
 
 results = {}
 
@@ -113,7 +112,7 @@ def PassiveScan(Target,
                        save=False,
                        store=False):
 
-    global themecolor, store
+    global themecolor
 
     now = datetime.now().strftime(
         "%Y-%m-%d %H:%M:%S"
