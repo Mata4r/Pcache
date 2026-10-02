@@ -54,14 +54,6 @@ Run the scanner from the project root:
 
 - It is preferable to use a MAC address if available.
 
-## GUI Usage
-Run the scanner from the project root, Then startup the GUI Version by runing:
-
-`python pcachegui.py`
-
-### Note
-Pcache GUI version was made fully by Claude code so if you notice any bugs, please open an issue or submit a pull request with a fix.
-
 # Windows installation
 
 - Run CMD as administrator
