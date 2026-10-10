@@ -43,6 +43,7 @@ import os
 import json
 
 console = Console()
+lookup = MacLookup()
 
 # Calling the settings.json file to use its contents
 try:
@@ -83,8 +84,6 @@ def packet_processor(Target,
             return
     except ValueError:
         return
-
-    lookup = MacLookup()
 
     # Checks if a IP Address not in results{} to forbid printing the same IP Address again
     if ip_address not in results:
