@@ -32,10 +32,6 @@ weakpoint: Passive discovery might not collect information about silent
            clients that are not generating network traffic during the scan.
 """
 
-import warnings
-from cryptography.utils import CryptographyDeprecationWarning
-warnings.filterwarnings("ignore", category=CryptographyDeprecationWarning)
-
 from scapy.all import sniff, IP, Ether, ARP
 from scapy.error import Scapy_Exception
 from mac_vendor_lookup import MacLookup
