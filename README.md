@@ -21,7 +21,6 @@ Pcache is a lightweight Python-based network scanner that focuses on passive sca
 - Adjustable Scan timing options
 - Results Saving
 - Device Ping
-- DoS Flood
 
 ## Usage
 Run the scanner from the project root:
@@ -38,13 +37,9 @@ Run the scanner from the project root:
 
 `python pcache.py -Ble`
 
-`python pcache.py -Dos 192.168.1.0/24`
-
 ### Main flags
 
 `-save` to save results 
-
-`-proto` to set a protocol for a DoS Flood only accepts [TCP, UDP, ICMP, HTTP, HTTPS]
 
 `-live` to live a BLE scan (Only works for BLE scans)
 
